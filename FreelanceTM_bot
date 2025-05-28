@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreelanceTM - Телеграм-бот для фрилансеров и заказчиков</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4F46E5',secondary:'#6366F1'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+}
+.gradient-bg {
+background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Навигация -->
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+<div class="container mx-auto px-6 py-4 flex items-center justify-between">
+<div class="flex items-center">
+<h1 class="text-2xl font-['Pacifico'] text-primary">FreelanceTM</h1>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#features" class="text-gray-700 hover:text-primary transition-colors">Возможности</a>
+<a href="#how-it-works" class="text-gray-700 hover:text-primary transition-colors">Как это работает</a>
+<a href="#benefits" class="text-gray-700 hover:text-primary transition-colors">Преимущества</a>
+<a href="#faq" class="text-gray-700 hover:text-primary transition-colors">FAQ</a>
+</div>
+<div>
+<a href="https://t.me/FreelanceTM_bot" class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors flex items-center">
+<i class="ri-telegram-fill mr-2"></i>
+Открыть бота
+</a>
+</div>
+</div>
+</nav>
+<!-- Hero секция -->
+<section class="relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=modern%20freelance%20workspace%20with%20laptop%2C%20smartphone%20with%20telegram%20app%2C%20coffee%20cup%2C%20and%20comfortable%20workspace%2C%20soft%20colors%2C%20minimalist%20style%2C%20light%20background%20that%20transitions%20smoothly%20to%20white%20on%20the%20left%20side%2C%20professional%20look%2C%20high-quality%20rendering%2C%20perfect%20for%20website%20hero%20section&width=1600&height=800&seq=1&orientation=landscape'); opacity: 0.9;"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
+<div class="container mx-auto px-6 py-20 relative">
+<div class="w-full md:w-1/2 lg:w-2/5">
+<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Найдите лучших фрилансеров в Туркменистане</h1>
+<p class="text-lg text-gray-700 mb-8">FreelanceTM — это телеграм-бот, который соединяет талантливых исполнителей и заказчиков. Размещайте заказы, находите клиентов и управляйте проектами в одном месте.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="https://t.me/FreelanceTM_bot" class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors flex items-center justify-center">
+<i class="ri-telegram-fill mr-2"></i>
+Начать сейчас
+</a>
+<a href="#how-it-works" class="border border-gray-300 text-gray-700 px-8 py-3 !rounded-button whitespace-nowrap hover:bg-gray-50 transition-colors flex items-center justify-center">
+Узнать больше
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Преимущества -->
+<section id="features" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Возможности FreelanceTM</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Наш бот предлагает полный набор инструментов для эффективного взаимодействия между фрилансерами и заказчиками</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Карточка 1 -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-file-list-3-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Размещение заказов</h3>
+<p class="text-gray-600">Создавайте детальные описания проектов с указанием бюджета, сроков и требований для привлечения подходящих исполнителей.</p>
+</div>
+<!-- Карточка 2 -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-user-search-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Поиск фрилансеров</h3>
+<p class="text-gray-600">Находите специалистов по категориям, просматривайте их портфолио и выбирайте лучших для вашего проекта.</p>
+</div>
+<!-- Карточка 3 -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-chat-3-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Прямое общение</h3>
+<p class="text-gray-600">Удобная система связи между заказчиком и исполнителем для обсуждения деталей и согласования условий.</p>
+</div>
+<!-- Карточка 4 -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-profile-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Профессиональные профили</h3>
+<p class="text-gray-600">Создавайте детальные профили с описанием навыков, опыта и примерами работ для привлечения клиентов.</p>
+</div>
+<!-- Карточка 5 -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-notification-3-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Уведомления</h3>
+<p class="text-gray-600">Получайте мгновенные оповещения о новых заказах, откликах и сообщениях, чтобы не упустить важные возможности.</p>
+</div>
+<!-- Карточка 6 -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-translate-2 text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Двуязычный интерфейс</h3>
+<p class="text-gray-600">Полная поддержка русского и туркменского языков для комфортного использования всеми пользователями.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Как это работает -->
+<section id="how-it-works" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Как работает FreelanceTM</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Простой и понятный процесс для заказчиков и фрилансеров</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<div class="space-y-12">
+<!-- Шаг 1 -->
+<div class="flex">
+<div class="flex-shrink-0">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">1</div>
+</div>
+<div class="ml-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Регистрация и выбор роли</h3>
+<p class="text-gray-600">Запустите бота, выберите язык интерфейса и определите свою роль: заказчик или фрилансер.</p>
+</div>
+</div>
+<!-- Шаг 2 -->
+<div class="flex">
+<div class="flex-shrink-0">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">2</div>
+</div>
+<div class="ml-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Создание профиля или заказа</h3>
+<p class="text-gray-600">Фрилансеры заполняют профиль с навыками и портфолио. Заказчики создают детальные описания проектов.</p>
+</div>
+</div>
+<!-- Шаг 3 -->
+<div class="flex">
+<div class="flex-shrink-0">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">3</div>
+</div>
+<div class="ml-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Поиск и взаимодействие</h3>
+<p class="text-gray-600">Фрилансеры находят интересные заказы и откликаются на них. Заказчики выбирают подходящих исполнителей.</p>
+</div>
+</div>
+<!-- Шаг 4 -->
+<div class="flex">
+<div class="flex-shrink-0">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">4</div>
+</div>
+<div class="ml-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Выполнение проекта и отзывы</h3>
+<p class="text-gray-600">После завершения работы стороны могут оставить отзывы, повышая репутацию и доверие в системе.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<img src="https://readdy.ai/api/search-image?query=smartphone%20with%20telegram%20bot%20interface%20showing%20freelance%20marketplace%2C%20clean%20design%2C%20professional%20UI%2C%20showing%20chat%20interface%20with%20buttons%20and%20menus%2C%20high%20quality%20detailed%20image&width=600&height=800&seq=2&orientation=portrait" alt="Интерфейс FreelanceTM" class="rounded-lg w-full h-auto">
+</div>
+</div>
+</div>
+</section>
+<!-- Для кого -->
+<section id="benefits" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Для кого подходит FreelanceTM</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Наш бот создан для удовлетворения потребностей как исполнителей, так и заказчиков</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Для фрилансеров -->
+<div class="bg-gray-50 p-8 rounded-lg">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+<i class="ri-user-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-2xl font-semibold text-gray-900 ml-4">Для фрилансеров</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex">
+<div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-check-line text-green-600 ri-sm"></i>
+</div>
+<p class="ml-3 text-gray-700">Доступ к базе актуальных заказов в различных категориях</p>
+</li>
+<li class="flex">
+<div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-check-line text-green-600 ri-sm"></i>
+</div>
+<p class="ml-3 text-gray-700">Создание профессионального профиля для привлечения клиентов</p>
+</li>
+<li class="flex">
+<div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-check-line text-green-600 ri-sm"></i>
+</div>
+<p class="ml-3 text-gray-700">Уведомления о новых проектах в выбранных категориях</p>
+</li>
+<li class="flex">
+<div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-check-line text-green-600 ri-sm"></i>
+</div>
+<p class="ml-3 text-gray-700">Возможность быстро откликаться на интересные предложения</p>
+</li>
+<li class="flex">
+<div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-check-line text-green-600 ri-sm"></i>
+</div>
+<p class="ml-3 text-gray-700">Управление портфолио и отзывами для повышения репутации</p>
+</li>
+</ul>
+</div>
+<!-- Для заказчиков -->
+<div class="bg-gray-50 p-8 rounded-lg">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+<i class="ri-building-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-2xl font-semibold text-gray-900 ml-4">Для заказчиков</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex">
+<div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-check-line text-green-600 ri-sm"></i>
+</div>
+<p class="ml-3 text-gray-700">Быстрое размещение заказов с детальным описанием требований</p>
+</li>
+<li class="flex">
+<div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-check-line text-green-600 ri-sm"></i>
+</div>
+<p class="ml-3 text-gray-700">Доступ к базе квалифицированных фрилансеров различных специальностей</p>
+</li>
+<li class="flex">
+<div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-check-line text-green-600 ri-sm"></i>
+</div>
+<p class="ml-3 text-gray-700">Возможность выбора исполнителя на основе портфолио и отзывов</p>
+</li>
+<li class="flex">
+<div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-check-line text-green-600 ri-sm"></i>
+</div>
+<p class="ml-3 text-gray-700">Удобное управление активными и завершёнными проектами</p>
+</li>
+<li class="flex">
+<div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-check-line text-green-600 ri-sm"></i>
+</div>
+<p class="ml-3 text-gray-700">Система отзывов для оценки качества выполненной работы</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Категории -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Категории услуг</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">FreelanceTM объединяет специалистов из различных областей</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- Категория 1 -->
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+<div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-code-s-slash-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-900">Разработка</h3>
+<p class="text-gray-600 text-sm mt-2">Веб, мобильные приложения, программирование</p>
+</div>
+<!-- Категория 2 -->
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+<div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-palette-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-900">Дизайн</h3>
+<p class="text-gray-600 text-sm mt-2">Графика, UI/UX, иллюстрации</p>
+</div>
+<!-- Категория 3 -->
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+<div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-article-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-900">Тексты</h3>
+<p class="text-gray-600 text-sm mt-2">Копирайтинг, переводы, статьи</p>
+</div>
+<!-- Категория 4 -->
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+<div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-line-chart-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-900">Маркетинг</h3>
+<p class="text-gray-600 text-sm mt-2">SMM, реклама, продвижение</p>
+</div>
+<!-- Категория 5 -->
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+<div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-video-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-900">Видео и аудио</h3>
+<p class="text-gray-600 text-sm mt-2">Монтаж, озвучка, анимация</p>
+</div>
+<!-- Категория 6 -->
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+<div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-translate-2 text-primary ri-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-900">Переводы</h3>
+<p class="text-gray-600 text-sm mt-2">Русский, туркменский, английский</p>
+</div>
+<!-- Категория 7 -->
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+<div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-customer-service-2-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-900">Консультации</h3>
+<p class="text-gray-600 text-sm mt-2">Бизнес, юридические, финансовые</p>
+</div>
+<!-- Категория 8 -->
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+<div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-more-2-fill text-primary ri-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-900">Другое</h3>
+<p class="text-gray-600 text-sm mt-2">Прочие специализации и услуги</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Интерфейс бота -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Интерфейс FreelanceTM</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Простой и интуитивно понятный интерфейс для комфортной работы</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Скриншот 1 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=telegram%20bot%20interface%20showing%20welcome%20screen%20with%20language%20selection%20buttons%20for%20Russian%20and%20Turkmen%2C%20clean%20modern%20UI%20design%2C%20smartphone%20screen&width=400&height=800&seq=3&orientation=portrait" alt="Выбор языка" class="w-full h-auto">
+<div class="p-6">
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Выбор языка</h3>
+<p class="text-gray-600">Двуязычный интерфейс позволяет выбрать удобный для вас язык: русский или туркменский.</p>
+</div>
+</div>
+<!-- Скриншот 2 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=telegram%20bot%20interface%20showing%20role%20selection%20screen%20with%20two%20buttons%20for%20freelancer%20and%20client%2C%20professional%20UI%20design%2C%20smartphone%20screen&width=400&height=800&seq=4&orientation=portrait" alt="Выбор роли" class="w-full h-auto">
+<div class="p-6">
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Выбор роли</h3>
+<p class="text-gray-600">Определите свою роль в системе: фрилансер (исполнитель) или заказчик (клиент).</p>
+</div>
+</div>
+<!-- Скриншот 3 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=telegram%20bot%20interface%20showing%20available%20jobs%20listing%20with%20categories%20and%20prices%2C%20clean%20professional%20UI%20design%2C%20smartphone%20screen&width=400&height=800&seq=5&orientation=portrait" alt="Список заказов" class="w-full h-auto">
+<div class="p-6">
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Просмотр заказов</h3>
+<p class="text-gray-600">Удобный список доступных заказов с возможностью фильтрации по категориям.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section id="faq" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Часто задаваемые вопросы</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Ответы на популярные вопросы о FreelanceTM</p>
+</div>
+<div class="max-w-3xl mx-auto space-y-6">
+<!-- Вопрос 1 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden">
+<button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+<span class="text-lg font-medium text-gray-900">Сколько стоит использование бота?</span>
+<i class="ri-arrow-down-s-line text-gray-500 ri-lg faq-icon"></i>
+</button>
+<div class="faq-content hidden px-6 pb-4">
+<p class="text-gray-600">Использование бота FreelanceTM полностью бесплатно как для фрилансеров, так и для заказчиков. Единственное условие — подписка на наш информационный канал @FreelanceTM.</p>
+</div>
+</div>
+<!-- Вопрос 2 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden">
+<button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+<span class="text-lg font-medium text-gray-900">Как начать использовать бота?</span>
+<i class="ri-arrow-down-s-line text-gray-500 ri-lg faq-icon"></i>
+</button>
+<div class="faq-content hidden px-6 pb-4">
+<p class="text-gray-600">Просто перейдите по ссылке <a href="https://t.me/FreelanceTM_bot" class="text-primary">t.me/FreelanceTM_bot</a>, запустите бота командой /start, выберите язык интерфейса, подпишитесь на канал и определите свою роль в системе.</p>
+</div>
+</div>
+<!-- Вопрос 3 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden">
+<button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+<span class="text-lg font-medium text-gray-900">Как происходит оплата между заказчиком и фрилансером?</span>
+<i class="ri-arrow-down-s-line text-gray-500 ri-lg faq-icon"></i>
+</button>
+<div class="faq-content hidden px-6 pb-4">
+<p class="text-gray-600">FreelanceTM не участвует в финансовых операциях между заказчиком и исполнителем. Стороны самостоятельно договариваются об условиях оплаты и способах перевода средств.</p>
+</div>
+</div>
+<!-- Вопрос 4 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden">
+<button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+<span class="text-lg font-medium text-gray-900">Можно ли использовать бота за пределами Туркменистана?</span>
+<i class="ri-arrow-down-s-line text-gray-500 ri-lg faq-icon"></i>
+</button>
+<div class="faq-content hidden px-6 pb-4">
+<p class="text-gray-600">Да, бот доступен для пользователей из любых стран. Однако основной фокус сделан на рынок Туркменистана и русскоязычную аудиторию.</p>
+</div>
+</div>
+<!-- Вопрос 5 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden">
+<button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+<span class="text-lg font-medium text-gray-900">Как обеспечивается безопасность данных?</span>
+<i class="ri-arrow-down-s-line text-gray-500 ri-lg faq-icon"></i>
+</button>
+<div class="faq-content hidden px-6 pb-4">
+<p class="text-gray-600">Мы храним минимально необходимый объем данных для функционирования сервиса. Все взаимодействия происходят через защищенный протокол Telegram, что обеспечивает высокий уровень безопасности.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="bg-primary rounded-lg p-10 text-center">
+<h2 class="text-3xl font-bold text-white mb-6">Начните использовать FreelanceTM прямо сейчас</h2>
+<p class="text-white text-lg mb-8 max-w-2xl mx-auto">Присоединяйтесь к растущему сообществу фрилансеров и заказчиков. Находите проекты и исполнителей быстро и удобно!</p>
+<a href="https://t.me/FreelanceTM_bot" class="inline-flex items-center bg-white text-primary px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors">
+<i class="ri-telegram-fill mr-2"></i>
+Открыть бота в Telegram
+</a>
+</div>
+</div>
+</section>
+<!-- Футер -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Лого и описание -->
+<div class="md:col-span-2">
+<h2 class="text-2xl font-['Pacifico'] text-white mb-4">FreelanceTM</h2>
+<p class="text-gray-400 mb-6">Телеграм-бот для поиска фрилансеров и заказов в Туркменистане. Соединяем талантливых исполнителей и заказчиков.</p>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<i class="ri-telegram-fill ri-lg"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<i class="ri-instagram-fill ri-lg"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<i class="ri-facebook-fill ri-lg"></i>
+</a>
+</div>
+</div>
+<!-- Ссылки -->
+<div>
+<h3 class="text-lg font-semibold mb-4">Ссылки</h3>
+<ul class="space-y-2">
+<li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Возможности</a></li>
+<li><a href="#how-it-works" class="text-gray-400 hover:text-white transition-colors">Как это работает</a></li>
+<li><a href="#benefits" class="text-gray-400 hover:text-white transition-colors">Преимущества</a></li>
+<li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+</ul>
+</div>
+<!-- Контакты -->
+<div>
+<h3 class="text-lg font-semibold mb-4">Контакты</h3>
+<ul class="space-y-2">
+<li class="flex items-center">
+<i class="ri-mail-line mr-2"></i>
+<a href="mailto:info@freelancetm.com" class="text-gray-400 hover:text-white transition-colors">info@freelancetm.com</a>
+</li>
+<li class="flex items-center">
+<i class="ri-telegram-line mr-2"></i>
+<a href="https://t.me/FreelanceTM" class="text-gray-400 hover:text-white transition-colors">@FreelanceTM</a>
+</li>
+<li class="flex items-center">
+<i class="ri-customer-service-2-line mr-2"></i>
+<a href="https://t.me/FreelanceTM_support" class="text-gray-400 hover:text-white transition-colors">@FreelanceTM_support</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 text-sm">© 2025 FreelanceTM. Все права защищены.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Политика конфиденциальности</a>
+<a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Условия использования</a>
+</div>
+</div>
+</div>
+</footer>
+<script id="faq-toggle-script">
+document.addEventListener('DOMContentLoaded', function() {
+const faqToggles = document.querySelectorAll('.faq-toggle');
+faqToggles.forEach(toggle => {
+toggle.addEventListener('click', function() {
+const content = this.nextElementSibling;
+const icon = this.querySelector('.faq-icon');
+// Toggle content visibility
+if (content.classList.contains('hidden')) {
+content.classList.remove('hidden');
+icon.classList.remove('ri-arrow-down-s-line');
+icon.classList.add('ri-arrow-up-s-line');
+} else {
+content.classList.add('hidden');
+icon.classList.remove('ri-arrow-up-s-line');
+icon.classList.add('ri-arrow-down-s-line');
+}
+});
+});
+});
+</script>
+</body>
+</html>
